@@ -1,0 +1,9 @@
+SELECT Name FROM Track LIMIT 10 OFFSET 10;
+SELECT Name FROM Track WHERE Name like '%Day%' LIMIT 10;
+SELECT EmployeeId, LastName,HireDate FROM Employee where HireDate > "2003-12-31";
+SELECT CustomerId, FirstName, Lastname FROM Customer WHERE FirstName="Fernanda" AND LastName="Ramos";
+SELECT FirstName, LastName, Address, City, State, Country, PostalCode FROM Customer WHERE Country IN('USA','Canada','Germany');      (I think in this task, there is a mistake like "Canda" . So I change it to Canada. I hope it wanted to be Canada, not Canda.)
+SELECT distinct(Country) FROM Customer;
+SELECT avg(Milliseconds)/1000 from Track;
+SELECT CustomerId, City, Country FROM Customer GROUP BY City ORDER BY Country DESC;
+SELECT a.Title, t.Name FROM Album a JOIN Track t ON a.AlbumId=t.AlbumId LIMIT 30;
