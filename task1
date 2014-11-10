@@ -9,3 +9,9 @@ SELECT CustomerId, City, Country FROM Customer GROUP BY City ORDER BY Country DE
 SELECT a.Title, t.Name FROM Album a JOIN Track t ON a.AlbumId=t.AlbumId LIMIT 30;
 INSERT INTO Customer (FirstName,LastName,Company, Country, City, PostalCode,Address,Email) VALUES ('Tamas','Keki','BGF','Hungary','Budapest','1149','11-13 Butogany Street','tattarattta@gmail.com');
 Select * FROM Customer Where Company="BGF";
+UPDATE Customer SET PostalCode="1111" WHERE Company="BGF";
+Select * FROM Customer Where Company="BGF";
+SELECT t.Name, g.Name from Track t CROSS JOIN Genre g WHERE t.TrackId in('1','3','5');
+SELECT c.FirstName, c.LastName,(SELECT total FROM Invoice ORDER BY total desc) FROM Customer c limit 1;
+SELECT State, Count(*) FROM Customer GROUP BY State HAVING count(*) order by count(*) desc limit 5;
+SELECT State, count(*) FROM Customer GROUP BY State HAVING count(*) ; 
