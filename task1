@@ -5,7 +5,7 @@ SELECT CustomerId, FirstName, Lastname FROM Customer WHERE FirstName="Fernanda" 
 SELECT FirstName, LastName, Address, City, State, Country, PostalCode FROM Customer WHERE Country IN('USA','Canada','Germany');      (I think in this task, there is a mistake like "Canda" . So I change it to Canada. I hope it wanted to be Canada, not Canda.)
 SELECT distinct(Country) FROM Customer;
 SELECT avg(Milliseconds)/1000 from Track;
-SELECT CustomerId, City, Country FROM Customer GROUP BY City ORDER BY Country DESC;
+SELECT CustomerId FROM Customer GROUP BY Country, City ORDER BY Country DESC;
 SELECT a.Title, t.Name FROM Album a JOIN Track t ON a.AlbumId=t.AlbumId LIMIT 30;
 INSERT INTO Customer (FirstName,LastName,Company, Country, City, PostalCode,Address,Email) VALUES ('Tamas','Keki','BGF','Hungary','Budapest','1149','11-13 Butogany Street','tattarattta@gmail.com');
 Select * FROM Customer Where Company="BGF";
